@@ -1,0 +1,32 @@
+From 7b24668955c8e5ee4a95136fc2cc8c119d98c2d4 Mon Sep 17 00:00:00 2001
+From: moxiivx <moxiix@proton.me>
+Date: Sun, 30 Nov 2025 17:03:02 +0100
+Subject: [PATCH] change dimens
+
+Signed-off-by: moxiivx <moxiix@proton.me >
+---
+ .../frameworks/base/packages/SystemUI/res/values/dimens.xml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/overlay/frameworks/base/packages/SystemUI/res/values/dimens.xml b/overlay/frameworks/base/packages/SystemUI/res/values/dimens.xml
+index dcc19c8..7b42d1e 100644
+--- a/overlay/frameworks/base/packages/SystemUI/res/values/dimens.xml
++++ b/overlay/frameworks/base/packages/SystemUI/res/values/dimens.xml
+@@ -20,11 +20,11 @@
+     <item name="pixel_pitch" format="float" type="dimen">62.72</item>
+   
+     <!-- Status bar values -->
+-    <dimen name="status_bar_height_default">24.0dp</dimen>
++    <dimen name="status_bar_height_default">14.0dp</dimen>
+     <dimen name="status_bar_height_landscape">24.0dp</dimen>
+-    <dimen name="status_bar_height_portrait">24.0dp</dimen>
++    <dimen name="status_bar_height_portrait">32.0dp</dimen>
+     <dimen name="status_bar_padding_start">43px</dimen>
+-    <dimen name="status_bar_padding_top">20px</dimen>
++    <dimen name="status_bar_padding_top">0px</dimen>
+ 
+     <!-- Location on the screen of the center of the physical power button. This is a reasonable
+          default that should be overridden by device-specific overlays. -->
+-- 
+2.52.0
+

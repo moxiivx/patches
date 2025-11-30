@@ -1,0 +1,57 @@
+From d9fd2491460c75288f1c37a2e7b8f1f74eab1b53 Mon Sep 17 00:00:00 2001
+From: moxiivx <moxiix@proton.me>
+Date: Sun, 30 Nov 2025 10:59:26 +0100
+Subject: [PATCH] add avium stuff
+
+Signed-off-by: moxiivx <moxiix@proton.me >
+---
+ avium_common.mk |  0
+ device.mk       |  2 ++
+ lineage_a53x.mk | 10 +++++++++-
+ 3 files changed, 11 insertions(+), 1 deletion(-)
+ create mode 100644 avium_common.mk
+
+diff --git a/avium_common.mk b/avium_common.mk
+new file mode 100644
+index 0000000..e69de29
+diff --git a/device.mk b/device.mk
+index 44a4f64..299bb00 100644
+--- a/device.mk
++++ b/device.mk
+@@ -69,3 +69,5 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+ # UDFPS
+ $(call soong_config_set,samsungUdfpsVars,udfps_zorder,0x2000U)
+ $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
++
++include device/samsung/a53x/avium_common.mk
+diff --git a/lineage_a53x.mk b/lineage_a53x.mk
+index 22890fc..c363e18 100644
+--- a/lineage_a53x.mk
++++ b/lineage_a53x.mk
+@@ -12,7 +12,6 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+-#
+ 
+ # Inherit from a53x device
+ $(call inherit-product, device/samsung/a53x/device.mk)
+@@ -20,6 +19,15 @@ $(call inherit-product, device/samsung/a53x/device.mk)
+ # Inherit some common Lineage stuff
+ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+ 
++# axion flags
++AVIUM_BUILDTYPE := Unoffical
++AVIUM_VERSION_APPEND_TIME_OF_DAY := false
++WITH_GMS := true
++TARGET_GMS_TYPE := MINI
++TARGET_INCLUDE_GOOGLEIME := true
++TARGET_GOOGLEIME_OVERRIDE_IME := true
++AVIUM_MAINTAINER := moxiu
++
+ # Device identifier, this must come after all inclusions
+ PRODUCT_DEVICE := a53x
+ PRODUCT_NAME := lineage_a53x
+-- 
+2.52.0
+

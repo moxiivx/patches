@@ -1,0 +1,25 @@
+From 707296760bc3944c636fd79fe27ca5d0de797005 Mon Sep 17 00:00:00 2001
+From: moxiivx <moxiix@proton.me>
+Date: Sun, 30 Nov 2025 11:01:24 +0100
+Subject: [PATCH] del sfc-nfs from file contexts
+
+Signed-off-by: moxiivx <moxiix@proton.me >
+---
+ sepolicy/vendor/file_contexts | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/sepolicy/vendor/file_contexts b/sepolicy/vendor/file_contexts
+index bee7aca..64c5ec4 100644
+--- a/sepolicy/vendor/file_contexts
++++ b/sepolicy/vendor/file_contexts
+@@ -91,7 +91,6 @@
+ /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.st                           u:object_r:hal_nfc_default_exec:s0
+ /dev/pn547                                                                                  u:object_r:nxp_nfc_device:s0
+ /dev/st21nfc                                                                                u:object_r:nfc_device:s0
+-/dev/sec-nfc                                                                                u:object_r:nfc_device:s0
+ 
+ # Performance Control Nodes
+ /sys/devices/system/cpu/cpufreq/policy[0-9]+/(scaling_min_freq|scaling_max_freq)            u:object_r:sysfs_performance:s0
+-- 
+2.52.0
+

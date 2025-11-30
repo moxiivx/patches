@@ -1,0 +1,25 @@
+From e98d871b347326559d185a791adf7c40b6e0b25d Mon Sep 17 00:00:00 2001
+From: moxiivx <moxiix@proton.me>
+Date: Sun, 30 Nov 2025 17:12:10 +0100
+Subject: [PATCH] add blur flag
+
+Signed-off-by: moxiivx <moxiix@proton.me >
+---
+ lineage_a53x.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/lineage_a53x.mk b/lineage_a53x.mk
+index c363e18..50a03cc 100644
+--- a/lineage_a53x.mk
++++ b/lineage_a53x.mk
+@@ -22,6 +22,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+ # axion flags
+ AVIUM_BUILDTYPE := Unoffical
+ AVIUM_VERSION_APPEND_TIME_OF_DAY := false
++TARGET_ENABLE_BLUR := true
+ WITH_GMS := true
+ TARGET_GMS_TYPE := MINI
+ TARGET_INCLUDE_GOOGLEIME := true
+-- 
+2.52.0
+
