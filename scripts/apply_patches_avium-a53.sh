@@ -33,13 +33,13 @@ cp "$patch4" "$a53x_dt"
 cd "$a53x_dt"
 
 echo "applying a53x patches.."
-git am "$patch1"
-git am "$patch3"
-git am "$patch4"
+git am "$patch1" || git am --abort
+git am "$patch3" || git am --abort
+git am "$patch4" || git am --abort
 
 cd "$s5e8825_common_dt"
 
 echo "applying s5e8825-common patches.."
-git am "$patch2"
+git am "$patch2" || git am --abort
 
 echo "done!"
