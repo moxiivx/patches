@@ -9,6 +9,8 @@ patch2="$HOME/patches/patches/a53_avium/0002-del-sfc-nfs-from-file-contexts.patc
 patch3="$HOME/patches/patches/a53_avium/0003-change-dimens.patch"
 patch4="$HOME/patches/patches/a53_avium/0004-add-blur-flag.patch"
 patch5="$HOME/patches/patches/a53_avium/0005-patch-libepicoperator.c.patch"
+patch6="$HOME/patches/patches/a53_avium/0006-fix-libsec-ril-missing-lib.patchh"
+patch7="$HOME/patches/patches/a53_avium/0007-hmm.patch"
 
 #------------------------------------------
 #             dirs to copy to
@@ -16,6 +18,7 @@ patch5="$HOME/patches/patches/a53_avium/0005-patch-libepicoperator.c.patch"
 
 a53x_dt="$HOME/roms/avium/device/samsung/a53x/"
 s5e8825_common_dt="$HOME/roms/avium/device/samsung/s5e8825-common/"
+vendor_s5e8825_dt="$HOME/roms/avium/vendor/samsung/s5e8825-common/"
 
 #-----------------------------------------------------------------------
 #          copy patches to the dirs where we apply the patches
@@ -26,7 +29,9 @@ cp "$patch1" "$a53x_dt"
 cp "$patch2" "$s5e8825_common_dt"
 cp "$patch3" "$a53x_dt"
 cp "$patch4" "$a53x_dt"
-cp "$patch2" "$s5e8825_common_dt"
+cp "$patch5" "$s5e8825_common_dt"
+cp "$patch6" "$vendor_s5e8825_dt"
+cp "$patch7" "$s5e8825_common_dt"
 
 #-------------------------------------------
 #              apply patches
@@ -44,5 +49,11 @@ cd "$s5e8825_common_dt"
 echo "applying s5e8825-common patches.."
 git am "$patch2" || git am --abort
 git am "$patch5" || git am --abort
+git am "$patch7" || git am --abort
+
+cd "$vendor_s5e8825_dt"
+
+echo "applying s5e8825-common vendor patches.."
+git am "$patch6" || git am --abort
 
 echo "done!"

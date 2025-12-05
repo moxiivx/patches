@@ -1,0 +1,32 @@
+From 3c0401a7012564dbb437ee1e8d1bcd25bb720801 Mon Sep 17 00:00:00 2001
+From: moxiivx <moxiix@proton.me>
+Date: Fri, 5 Dec 2025 21:14:06 +0100
+Subject: [PATCH] fix libsec-ril missing lib
+
+Signed-off-by: moxiivx <moxiix@proton.me>
+---
+ Android.bp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/Android.bp b/Android.bp
+index 9973d3a..dd4f864 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -1,5 +1,5 @@
+ //
+-// Automatically generated file. DO NOT MODIFY
++// Automatically generated file. DO NOT MODIFY (DO NOT MODIFY? HUH? fucking bullshit i'll do it any way)
+ //
+ 
+ soong_namespace {
+@@ -1144,6 +1144,7 @@ cc_prebuilt_library_shared {
+                 "libVendorSemDataProps",
+                 "libprotobuf-cpp-full",
+                 "libvkmanager_vendor",
++                "libprotobuf-cpp-full-21.7",
+                 "libengmode_client",
+                 "libbase",
+                 "libbinder_ndk",
+-- 
+2.52.0
+
