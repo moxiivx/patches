@@ -32,6 +32,13 @@ a53x_dt="$HOME/roms/avium/device/samsung/a53x/"
 s5e8825_common_dt="$HOME/roms/avium/device/samsung/s5e8825-common/"
 vendor_s5e8825_dt="$HOME/roms/avium/vendor/samsung/s5e8825-common/"
 
+#------------------------------------------
+#               Kernel dir
+#------------------------------------------
+
+kernel_dir="$HOME/roms/avium/kernel/samsung/s5e8825"
+
+
 #-----------------------------------------------------------------------
 #          copy patches to the dirs where we apply the patches
 #-----------------------------------------------------------------------
@@ -88,5 +95,9 @@ cd "$vendor_s5e8825_dt"
 
 echo "removing s5e8825-common vendor patches.."
 rm -rf "$patch6_a"
+
+echo "apply KSUN"
+cd "$kernel_dir"
+curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
 
 echo "done!"
