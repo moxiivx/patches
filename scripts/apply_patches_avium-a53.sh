@@ -4,13 +4,13 @@
 #                patches
 #------------------------------------------
 
-patch1="$HOME/patches/patches/a53_avium/0001-add-avium-stuff.patch"
-patch2="$HOME/patches/patches/a53_avium/0002-del-sfc-nfs-from-file-contexts.patch"
-patch3="$HOME/patches/patches/a53_avium/0003-change-dimens.patch"
-patch4="$HOME/patches/patches/a53_avium/0004-add-blur-flag.patch"
-patch5="$HOME/patches/patches/a53_avium/0005-patch-libepicoperator.c.patch"
-patch6="$HOME/patches/patches/a53_avium/0006-fix-libsec-ril-missing-lib.patch"
-patch7="$HOME/patches/patches/a53_avium/0007-hmm.patch"
+patch1="$HOME/patches/patches/a53_avium/a53_patches/0001-add-avium-stuff.patch"
+patch2="$HOME/patches/patches/a53_avium/s5e8825-common_patches/0002-del-sfc-nfs-from-file-contexts.patch"
+patch3="$HOME/patches/patches/a53_avium/a53_patches/0003-change-dimens.patch"
+patch4="$HOME/patches/patches/a53_avium/a53_patches/0004-add-blur-flag.patch"
+patch5="$HOME/patches/patches/a53_avium/s5e8825-common_patches/0005-patch-libepicoperator.c.patch"
+patch6="$HOME/patches/patches/a53_avium/vendor_patches/0006-fix-libsec-ril-missing-lib.patch"
+patch7="$HOME/patches/patches/a53_avium/s5e8825-common_patches/0007-hmm.patch"
 
 #------------------------------------------
 #             moved to dir patches
