@@ -1,0 +1,27 @@
+From 118a36f768cdf152e3f8ce9608138f0ea4995263 Mon Sep 17 00:00:00 2001
+From: moxiivx <moxiix@proton.me>
+Date: Thu, 1 Jan 2026 01:54:28 +0100
+Subject: [PATCH] add-includepriv-keys
+
+Signed-off-by: moxiivx <moxiix@proton.me>
+---
+ lineage_a53x.mk | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/lineage_a53x.mk b/lineage_a53x.mk
+index 50a03cc..4341818 100644
+--- a/lineage_a53x.mk
++++ b/lineage_a53x.mk
+@@ -29,6 +29,9 @@ TARGET_INCLUDE_GOOGLEIME := true
+ TARGET_GOOGLEIME_OVERRIDE_IME := true
+ AVIUM_MAINTAINER := moxiu
+ 
++# priv keys
++-include vendor/lineage-priv/keys/keys.mk
++
+ # Device identifier, this must come after all inclusions
+ PRODUCT_DEVICE := a53x
+ PRODUCT_NAME := lineage_a53x
+-- 
+2.52.0
+
